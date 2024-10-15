@@ -1,2 +1,3 @@
-# rails_forms
- A plaground for forms in rails
+# Rails Forms
+
+A plaground for testing forms in rails
