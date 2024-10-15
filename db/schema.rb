@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_10_15_150026) do
+ActiveRecord::Schema[7.2].define(version: 2024_10_15_150627) do
+  create_table "categories_products", id: false, force: :cascade do |t|
+    t.integer "product_id", null: false
+    t.integer "category_id", null: false
+    t.string "external_code"
+    t.index ["category_id"], name: "index_categories_products_on_category_id"
+    t.index ["external_code"], name: "index_categories_products_on_external_code"
+    t.index ["product_id"], name: "index_categories_products_on_product_id"
+  end
+
   create_table "products", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
