@@ -1,3 +1,3 @@
 class Product < ApplicationRecord
-    validates :name, prescence: true
+    validates :name, presence: true
 end
